@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".DetailActivity">
+
+    <TextView
+        android:id="@+id/detailTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Title"
+        android:textSize="24sp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/lavender"/>
+
+    <ImageView
+        android:id="@+id/detailImage"
+        android:layout_width="400dp"
+        android:layout_height="200dp"
+        android:layout_below="@+id/detailTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:padding="8dp"
+        android:src="@drawable/uploadimg"
+        android:scaleType="fitXY"/>
+
+    <TextView
+        android:id="@+id/authorName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Autor:"
+        android:layout_below="@+id/detailImage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:textSize="18sp"
+        android:textColor="@color/lavender"/>
+
+    <TextView
+        android:id="@+id/detailLang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/authorName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:padding="20dp"
+        android:text="Lokacija:"
+        android:textSize="18sp"
+        android:textColor="@color/lavender"/>
+
+    <TextView
+        android:id="@+id/detailDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/detailLang"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:padding="20dp"
+        android:text="Recept:"
+        android:textSize="18sp"
+        android:textColor="@color/lavender"/>
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/detailDesc"
+        android:numStars="5"
+        android:rating="0"
+        android:stepSize="1"
+        android:progressBackgroundTint="@color/black"
+        android:progressTint="@android:color/holo_orange_dark"
+        android:scaleX="0.6"
+        android:scaleY="0.6" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ratingBar"
+        android:layout_centerHorizontal="true"
+        android:text=" "
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit rating"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true" />
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        app:menu_fab_size="normal"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="20dp"
+        app:menu_colorPressed="@color/lavender"
+        app:menu_colorNormal="@color/lavender"
+        app:menu_icon="@drawable/ic_baseline_format_list_bulleted_24"
+        app:menu_openDirection="up"
+        app:menu_showShadow="true"
+        tools:ignore="MissingClass">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/editButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_edit_24"
+            app:fab_showShadow="true"
+            app:fab_colorNormal="@color/green"
+            app:fab_size="mini"/>
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/deleteButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_delete_24"
+            app:fab_showShadow="true"
+            app:fab_colorNormal="@color/red"
+            app:fab_size="mini"/>
+    </com.github.clans.fab.FloatingActionMenu>
+
+</RelativeLayout>
